@@ -16,7 +16,7 @@ contract MyGame {
 
     function addPlayer(string memory firstName, string memory lastName) public returns (Player memory) {
         players[msg.sender] = Player(msg.sender, Level.Novice, firstName, lastName, block.timestamp);
-        return (Player) players[msg.sender];
+        return players[msg.sender];
         playerCount +=1
     }
 
